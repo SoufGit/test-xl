@@ -1,0 +1,24 @@
+{
+    "employeeList": [
+        {
+            "id": 1,
+            "name": "Younes",
+            "color": "yellowgreen"
+        },
+        {
+            "id": 2,
+            "name": "Sami",
+            "color": "orange"
+        },
+        {
+            "id": 3,
+            "name": "Hossain",
+            "color": "tomato"
+        },
+        {
+            "id": 4,
+            "name": "Dani",
+            "color": "deepskyblue "
+        }
+    ]
+}
