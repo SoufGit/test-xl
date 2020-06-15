@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import classnames from 'classnames';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -13,7 +14,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 
-import { MenuIcon, ChevronLeftIcon, ChevronRightIcon, PersonIcon, MailIcon, IconButton, HistoryIcon, GroupIcon } from '../../assets/icons';
+import { HomeIcon, MenuIcon, ChevronLeftIcon, ChevronRightIcon, PersonIcon, MailIcon, IconButton, HistoryIcon, GroupIcon } from '../../assets/icons';
 
 const drawerWidth = 240;
 
@@ -76,7 +77,13 @@ const useStyles = makeStyles(theme => ({
         flexGrow: 1,
         padding: theme.spacing(3),
     },
+    link: {
+        textDecoration: 'none',
+        color: theme.palette.text.primary
+    }
 }));
+
+const getTextLink = text => `/${text.toLowerCase()}`;
 
 const DrawerContainer = ({ children }) => {
     const classes = useStyles();
@@ -138,20 +145,32 @@ const DrawerContainer = ({ children }) => {
                 </div>
                 <Divider />
                 <List>
-                    {['Administration', 'Equipe', 'Saisie des CRA'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <HistoryIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
+                    <Link to='/' className={classes.link}>
+                        <ListItem button>
+                            <ListItemIcon>
+                                <HomeIcon />
+                            </ListItemIcon>
+                            <ListItemText primary={'Accueil'} />
                         </ListItem>
+                    </Link>
+                    {['Administration', 'Equipe', 'CRA'].map((text, index) => (
+                        <Link to={getTextLink(text)} className={classes.link} key={text}>
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <HistoryIcon /> : <MailIcon />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
                 <Divider />
                 <List>
                     {['Fournisseurs', 'Clients'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <GroupIcon /> : <PersonIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
+                        <Link to={getTextLink(text)} key={text}>
+                            <ListItem button key={text}>
+                                <ListItemIcon>{index % 2 === 0 ? <GroupIcon /> : <PersonIcon />}</ListItemIcon>
+                                <ListItemText primary={text} />
+                            </ListItem>
+                        </Link>
                     ))}
                 </List>
             </Drawer>
