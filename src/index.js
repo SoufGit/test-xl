@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import Router from './Router';
 import toto from './assets/images/xlBurger1.jpeg';
 //import './index.less';
 
@@ -9,6 +9,6 @@ console.log('VERSION', pjson.version);
 console.log('totototo', toto);
 //document.write('totot')
 ReactDOM.render(
-    <App />,
+    <Router />,
     document.getElementById('root')
 );

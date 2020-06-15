@@ -9,4 +9,5 @@ export { default as HistoryIcon } from '@material-ui/icons/History';
 export { default as GroupIcon } from '@material-ui/icons/Group';
 export { default as PersonIcon } from '@material-ui/icons/Person';
 export { default as PeopleOutlineIcon } from '@material-ui/icons/PeopleOutline';
+export { default as HomeIcon } from '@material-ui/icons/Home';
 

@@ -95,7 +95,14 @@ module.exports = {
         //new MiniCssExtractPlugin()
     ],
     resolve: {
-        //extensions: ['.js', '.less', '.css', '.scss'],
+        alias: {
+            Components: path.resolve(__dirname, '../src/components/'),
+            Helpers: path.resolve(__dirname, '../src/helpers/'),
+            Store: path.resolve(__dirname, '../src/store/'),
+            Test: path.resolve(__dirname, '../src/test/'),
+            Utils: path.resolve(__dirname, '../src/utils/'),
+        },
+        extensions: ['.js', '.jsx', '.json', '.less']
     },
     devServer: {
         contentBase: path.resolve(__dirname, "dist"),
