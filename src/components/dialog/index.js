@@ -1,2 +1,2 @@
-export { default as DialogItem } from './DialogItem';
-export { default as DialogWithSelect } from './DialogWithSelect';
+export {default as DialogItem} from './DialogItem';
+export {default as DialogWithSelect} from './DialogWithSelect';

@@ -1,7 +1,7 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 
-const ButtonCustom = ({ className, text, color, variant, onClick, ...otherProps }) =>
+const ButtonCustom = ({className, text, color, variant, onClick, ...otherProps}) =>
     <Button
         color={color}
         className={className}
@@ -10,6 +10,6 @@ const ButtonCustom = ({ className, text, color, variant, onClick, ...otherProps 
         {...otherProps}
     >
         {text}
-    </Button>
+    </Button>;
 
 export default ButtonCustom;

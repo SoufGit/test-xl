@@ -1,38 +1,39 @@
 import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
+import {makeStyles} from '@material-ui/core/styles';
 import DialogItem from './DialogItem';
-import { InputItem, InputSelect } from '../input';
+import {InputItem, InputSelect} from '../input';
 
 const useStyles = makeStyles(theme => ({
     container: {
-        marginBottom: theme.spacing(3),
+        marginBottom: theme.spacing(3)
     },
-    textField: {
-        //marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(10),
-        width: 250,
+    dense: {
+        marginTop: 19
+    },
+    menu: {
+        width: 200
     },
     selectField: {
         marginLeft: theme.spacing(1),
-        //marginRight: theme.spacing(12),
-        width: 200,
+        // MarginRight: theme.spacing(12),
+        width: 200
     },
-    dense: {
-        marginTop: 19,
-    },
-    menu: {
-        width: 200,
-    },
+    textField: {
+        // MarginLeft: theme.spacing(1),
+        marginRight: theme.spacing(10),
+        width: 250
+    }
 }));
 
-const DialogWithSelect = ({ isOpen, values, handleInputSelectChange, handleDialogClose, handleInputChange, inputValue, inputSelectValue }) => {
+const DialogWithSelect = ({isOpen, values, handleInputSelectChange, handleDialogClose, handleInputChange, inputValue, inputSelectValue}) => {
     const classes = useStyles();
+
     return (
         <DialogItem
             isOpen={isOpen}
             handleClose={handleDialogClose}
-            contentText='Let Google help apps determine location.'
-            contentTitle='Saisie des informations'
+            contentText="Let Google help apps determine location."
+            contentTitle="Saisie des informations"
         >
             <div className={classes.container}>
                 <InputItem
@@ -54,6 +55,6 @@ const DialogWithSelect = ({ isOpen, values, handleInputSelectChange, handleDialo
             </div>
         </DialogItem>
     );
-}
+};
 
 export default DialogWithSelect;
