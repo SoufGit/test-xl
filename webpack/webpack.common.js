@@ -1,6 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const DashboardPlugin = require("webpack-dashboard/plugin");
 
 // Webpack v4: `MiniCssExtractPlugin` replaces `ExtractTextPlugin` and is specific to CSS
@@ -8,7 +8,7 @@ const DashboardPlugin = require("webpack-dashboard/plugin");
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-    entry: ['./src/less/index.less', './src/index.js'],
+    entry: ['./src/less/index.less', './src/index.jsx'],
     module: {
         rules: [
             {

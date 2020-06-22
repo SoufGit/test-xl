@@ -5,13 +5,12 @@ import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import Slide from '@material-ui/core/Slide';
-import ButtonCustom from '../button/Button'
+import ButtonCustom from '../button/Button';
 
-const Transition = React.forwardRef(function Transition(props, ref) {
-    return <Slide direction="up" ref={ref} {...props} />;
-});
+// eslint-disable-next-line react/display-name
+const Transition = React.forwardRef((props, ref) => <Slide direction="up" ref={ref} {...props} />);
 
-const DialogItem = ({ isOpen, handleClose, contentText, contentTitle, children }) =>
+const DialogItem = ({isOpen, handleClose, contentText, contentTitle, children}) =>
     <Dialog
         open={isOpen}
         TransitionComponent={Transition}
@@ -32,14 +31,14 @@ const DialogItem = ({ isOpen, handleClose, contentText, contentTitle, children }
             <ButtonCustom
                 onClick={() => handleClose(true)}
                 color="primary"
-                text='Annuler'
+                text="Annuler"
             />
             <ButtonCustom
                 onClick={() => handleClose(false)}
                 color="primary"
-                text='Valider'
+                text="Valider"
             />
         </DialogActions>
-    </Dialog>
+    </Dialog>;
 
 export default DialogItem;
