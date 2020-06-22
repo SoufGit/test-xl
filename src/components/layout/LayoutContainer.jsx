@@ -6,7 +6,7 @@ import DrawerContainer from '../drawer/DrawerContainer';
 const LayoutContainer = ({children}) =>
     <Fragment>
         <CssBaseline />
-        <Container maxWidth="xl" style={{backgroundColor: 'whitesmoke'}}>
+        <Container maxWidth="xl" >
             <DrawerContainer>
                 {children}
             </DrawerContainer>

@@ -13,6 +13,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
+import DarkModeSwitch from '../layout/DarkModeSwitch';
 
 import {ChevronLeftIcon, ChevronRightIcon, GroupIcon, HistoryIcon, HomeIcon, IconButton, MailIcon, MenuIcon, PersonIcon} from '../../assets/icons';
 
@@ -122,6 +123,7 @@ const DrawerContainer = ({children}) => {
                     <Typography variant="h6" noWrap>
                         XL Burger Back-Office
                     </Typography>
+                    <DarkModeSwitch />
                 </Toolbar>
             </AppBar>
             <Drawer

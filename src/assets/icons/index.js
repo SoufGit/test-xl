@@ -9,3 +9,5 @@ export {default as GroupIcon} from '@material-ui/icons/Group';
 export {default as PersonIcon} from '@material-ui/icons/Person';
 export {default as PeopleOutlineIcon} from '@material-ui/icons/PeopleOutline';
 export {default as HomeIcon} from '@material-ui/icons/Home';
+export {default as Brightness3Icon} from '@material-ui/icons/Brightness3';
+export {default as WbSunnyIcon} from '@material-ui/icons/WbSunny';

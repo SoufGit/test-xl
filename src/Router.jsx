@@ -18,6 +18,10 @@ const Router = () =>
                     path="/cra"
                     component={(props) => <BigCalendar {...props} />}
                 />
+                {/* <Route
+                    path="/cra"
+                    render={(props) => <BigCalendar {...props} toto/>}
+                /> */}
             </Switch>
         </LayoutContainer>
     </BrowserRouter>;

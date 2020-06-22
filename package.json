@@ -22,7 +22,8 @@
         "react-big-calendar": "^0.22.1",
         "react-dom": "^16.9.0",
         "react-router": "^5.2.0",
-        "react-router-dom": "^5.2.0"
+        "react-router-dom": "^5.2.0",
+        "use-dark-mode": "^2.3.1"
     },
     "devDependencies": {
         "@babel/core": "^7.6.2",
