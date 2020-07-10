@@ -3,6 +3,8 @@ import {BrowserRouter} from 'react-router-dom';
 import {Route, Switch} from 'react-router';
 import LayoutContainer from 'Components/layout/LayoutContainer';
 import BigCalendar from 'Components/calendar/CalendarContainer';
+import MaterialTableContainer from 'Components/table/MaterialTableContainer';
+import TableContainer from 'Components/table/TableContainer';
 import App from './App';
 
 const Router = () =>
@@ -17,6 +19,14 @@ const Router = () =>
                 <Route
                     path="/cra"
                     component={(props) => <BigCalendar {...props} />}
+                />
+                <Route
+                    path="/administration"
+                    component={(props) => <TableContainer {...props} />}
+                />
+                <Route
+                    path="/teams"
+                    component={(props) => <MaterialTableContainer {...props} />}
                 />
             </Switch>
         </LayoutContainer>
