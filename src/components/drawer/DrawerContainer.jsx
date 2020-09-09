@@ -14,7 +14,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 
-import {ChevronLeftIcon, ChevronRightIcon, GroupIcon, HistoryIcon, HomeIcon, IconButton, MailIcon, MenuIcon, PersonIcon} from '../../assets/icons';
+import {ChevronLeftIcon, ChevronRightIcon, GroupIcon, HistoryIcon, HomeIcon, IconButton, MailIcon, MenuIcon, PeopleOutlineIcon, PersonIcon} from '../../assets/icons';
 
 const drawerWidth = 240;
 
@@ -153,10 +153,10 @@ const DrawerContainer = ({children}) => {
                             <ListItemText primary={'Accueil'} />
                         </ListItem>
                     </Link>
-                    {['Administration', 'Equipe', 'CRA'].map((text, index) =>
+                    {['Administration', 'Teams', 'CRA'].map((text, index) =>
                         <Link to={getTextLink(text)} className={classes.link} key={text}>
                             <ListItem button key={text}>
-                                <ListItemIcon>{index % 2 === 0 ? <HistoryIcon /> : <MailIcon />}</ListItemIcon>
+                                <ListItemIcon>{index % 2 === 0 ? <HistoryIcon /> : <PeopleOutlineIcon />}</ListItemIcon>
                                 <ListItemText primary={text} />
                             </ListItem>
                         </Link>)}

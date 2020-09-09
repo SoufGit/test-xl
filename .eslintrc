@@ -130,9 +130,9 @@
         // enforce a maximum line length
         // https://eslint.org/docs/rules/max-len
         "max-len": [
-            "warn",
+            "error",
             {
-                "code": 80
+                "code": 200
             }
         ],
         "max-lines": "error",
