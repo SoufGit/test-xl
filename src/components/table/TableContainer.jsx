@@ -140,7 +140,7 @@ const stableSort = (array, comparator) => {
     return stabilizedThis.map(el => el[0]);
 };
 
-const rows = data.employeeList.map(item => createData(item)).sort((aa, bb) => (a.name < b.name ? -1 : 1));
+const rows = data.employeeList.map(item => createData(item)).sort((aa, bb) => (aa.name < bb.name ? -1 : 1));
 
 const useStyles2 = makeStyles({
     table: {
